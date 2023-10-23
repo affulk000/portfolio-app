@@ -1,4 +1,4 @@
-import { Data, ScrollDown, Social } from './components'
+import { Data, ScrollDown, Skills, Social } from './components'
 import { About } from './components/About'
 import Navbar from './components/Navbar'
 
@@ -20,7 +20,7 @@ function App() {
         </div>
       </section>
       <About />
-
+      <Skills />
     </>
   )
 }

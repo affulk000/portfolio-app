@@ -1,4 +1,6 @@
-{/* <script lang="ts">
+
+const Skills = () => {
+
 	interface sections {
 		skillName: string;
 		skillLevel: String;
@@ -56,55 +58,56 @@
 			skillLevel: 'Basic',
 		},
 	];
-</script>
+  return (
+	
 
-<svelte:head>
-	<title>Skills</title>
-	<meta name="description" content="skills page" />
-</svelte:head>
 
-<section class="prose prose-headings:text-lg prose-h2:text-2xl prose-h3:text-base mx-auto mt-12">
-	<h2 class="text-center mb-0">Skills</h2>
-	<span class="flex justify-center mb-5">My Technical level</span>
+<section id='skills' className="prose prose-headings:text-lg prose-h2:text-2xl prose-h3:text-base mx-auto mt-12">
+	<h2 className="text-center mb-0">Skills</h2>
+	<span className="flex justify-center mb-5">My Technical level</span>
 
-	<div class="grid grid-cols-[repeat(2,350px)] gap-12 justify-center">
-		<div class="border border-solid py-2 px-3 bg-white rounded-lg shadow-xl shadow-slate-400">
-			<h3 class="text-center">Frontend developer</h3>
+	<div className="grid grid-cols-[repeat(2,350px)] gap-12 justify-center">
+		<div className="border border-solid py-2 px-3 bg-white rounded-lg shadow-xl shadow-slate-400">
+			<h3 className="text-center">Frontend developer</h3>
 
-			<div class="flex">
-				<div class="grid grid-cols-3">
-					{#each sections as section}
-					<div class="flex space-x-2 items-baseline justify-center px-2">
+			<div className="flex">
+				<div className="grid grid-cols-3">
+					{sections.map((section: sections) => (
+					<div className="flex space-x-2 items-baseline justify-center px-2">
 						
-						<i class="fa-regular fa-badge-check text-base" />
-						<div class="mt-1 mb-3 flex flex-col">
-								<h3 class="m-0">{section.skillName}</h3>
-								<span class="text-sm ">{section.skillLevel}</span>
+						<i className="fa-regular fa-badge-check text-base" />
+						<div className="mt-1 mb-3 flex flex-col">
+								<h3 className="m-0">{section.skillName}</h3>
+								<span className="text-sm ">{section.skillLevel}</span>
 						</div>
 						
 					</div>
-					{/each}
+					), )};
 				</div>
 			</div>
 		</div>
-		<div class="border border-solid py-2 px-3 bg-white shadow-xl shadow-slate-400 rounded-lg">
-			<h3 class="text-center">Backend developer</h3>
+		<div className="border border-solid py-2 px-3 bg-white shadow-xl shadow-slate-400 rounded-lg">
+			<h3 className="text-center">Backend developer</h3>
 
-			<div class="flex">
-				<div class="grid grid-cols-3">
-					{#each backend as section}
-					<div class="flex space-x-2 items-baseline justify-center px-2">
+			<div className="flex">
+				<div className="grid grid-cols-3">
+					{backend.map((section: sections) => (
+					<div className="flex space-x-2 items-baseline justify-center px-2">
 						
-						<i class="fa-regular fa-badge-check text-base" />
-						<div class="mt-1 mb-3 flex flex-col">
-								<h3 class="m-0">{section.skillName}</h3>
-								<span class="text-sm">{section.skillLevel}</span>
+						<i className="fa-regular fa-badge-check text-base" />
+						<div className="mt-1 mb-3 flex flex-col">
+								<h3 className="m-0">{section.skillName}</h3>
+								<span className="text-sm">{section.skillLevel}</span>
 						</div>
 						
 					</div>
-					{/each}
+					),)}
 				</div>
 			</div>
 		</div>
 	</div>
-</section> */}
+</section>
+  )
+}
+
+export default Skills;
