@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    .navbar-mobile__link {
+        @apply inline-block text-center relative text-blue-500 transition duration-[0.3s]
+    }
+    
+}

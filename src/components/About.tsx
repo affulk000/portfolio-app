@@ -4,7 +4,7 @@ import Info from "./Info"
 
 
 export const About: FC = () => (
-	<>
+	<section id="about">
 		<div className="prose prose-headings:text-2xl dark:prose-invert mx-auto my-3">
 			{/* <!--Title--> */}
 			<h2 className="text-center mb-0">About Me</h2>
@@ -32,5 +32,5 @@ export const About: FC = () => (
 				</div>
 			</div>
 		</div>
-	</>
+	</section>
 )
